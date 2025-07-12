@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Stories</title>
+</head>
+<body>
+  <h1>Web Stories</h1>
+  <ul>
+    {% for story in stories %}
+      <li style="display: flex; flex-direction: column; margin-bottom: 20px;">
+        <img style="width: 100%; max-width: 400px;" src="{{ story.cover_image.url }}" alt="{{ story.title }}">
+        <a href="{% url 'story_detail' story.slug %}?title={{ story.title|slugify }}&&orderof={{ story.created_at|slugify }}">{{ story.title }}</a>
+        <p>{{ story.created_at }}</p>
+      </li>
+    {% endfor %}
+  </ul>
+</body>
+</html>
