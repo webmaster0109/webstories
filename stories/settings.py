@@ -132,11 +132,11 @@ CLOUDFLARE_R2_CONFIG_OPTIONS = {
 
 STORAGES = {
     "default": {
-      "BACKEND": "helpers.cloudflare.storages.MediaFileStorage",
+      "BACKEND": "stories.helpers.cloudflare.storages.MediaFileStorage",
       "OPTIONS": CLOUDFLARE_R2_CONFIG_OPTIONS,
     },
     "staticfiles": {
-      "BACKEND": "helpers.cloudflare.storages.StaticFileStorage",
+      "BACKEND": "stories.helpers.cloudflare.storages.StaticFileStorage",
       "OPTIONS": CLOUDFLARE_R2_CONFIG_OPTIONS,
     },
 }
