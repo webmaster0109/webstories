@@ -1,0 +1,13 @@
+asgiref==3.9.1
+boto3==1.39.4
+botocore==1.39.4
+Django==5.2.4
+django-storages==1.14.6
+jmespath==1.0.1
+pillow==11.3.0
+python-dateutil==2.9.0.post0
+python-decouple==3.8
+s3transfer==0.13.0
+six==1.17.0
+sqlparse==0.5.3
+urllib3==2.5.0
