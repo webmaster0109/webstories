@@ -18,7 +18,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "django-insecure-72a96_r23r!w%&qwq9c#__@4v90#x0vxuo7(9tcq#&9su$%25l"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = config("DJANGO_DEBUG")
+DEBUG = False
 
 ALLOWED_HOSTS = ["*"]
 
@@ -112,9 +112,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 STATIC_URL = "static/"
-# import os
-# MEDIA_URL = "/media/"
-# MEDIA_ROOT = os.path.join(BASE_DIR, 'public')
+
 
 CLOUDFLARE_R2_BUCKET=config("CLOUDFLARE_R2_BUCKET")
 CLOUDFLARE_R2_BUCKET_ENDPOINT=config("CLOUDFLARE_R2_BUCKET_ENDPOINT")
