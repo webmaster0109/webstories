@@ -1,11 +1,13 @@
 from django.shortcuts import render, get_object_or_404
 from .models import WebStory
+
+from django.contrib.syndication.views import Feed
 # Create your views here.
 
 
 def story_list(request):
   stories = WebStory.objects.filter(is_active=True).order_by('-created_at')
-
+  print(Feed.__module__)
   return render(request, 'index.html', {'stories': stories})
 
 def story_detail(request, slug):

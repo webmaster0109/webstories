@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feed Parser</title>
+</head>
+<body>
+  <h1>Feed Entries</h1>  
+  {% if feeds %}
+    <p>Total entries: {{ feeds|length }}</p>
+  {% else %}
+    <p>No entries found.</p>
+  {% endif %}
+  <ul>
+    {% for feed in feeds %}
+      <li>
+        <h2>{{ feed.title }}</h2>
+        <p>Published on: {{ feed.published }}</p>
+        <img src="{{ feed.media_thumbnail.0.url }}" alt="{{ feed.title }}">
+        <p>{{ feed.description }}</p>
+        <a href="{{ feed.link }}">Read more</a>
+      </li>
+    {% endfor %}
+  </ul>
+</body>
+</html>

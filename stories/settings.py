@@ -33,6 +33,8 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "story_app",
+    "feed_parser",
+    "live_streaming",
 ]
 
 MIDDLEWARE = [

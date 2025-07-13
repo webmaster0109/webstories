@@ -13,7 +13,6 @@
         <img style="width: 100%; max-width: 400px;" src="{{ story.cover_image.url }}" alt="{{ story.title }}">
         <a href="{% url 'story_detail' story.slug %}?title={{ story.title|slugify }}&&orderof={{ story.created_at|slugify }}">{{ story.title }}</a>
         <p>{{ story.created_at }}</p>
-        {{story.cover_image.url}}
       </li>
     {% endfor %}
   </ul>
