@@ -27,7 +27,7 @@ def optimize_image(image_field, target_kb=100, max_width=1000):
         quality = 85
         img.save(buffer, format='WEBP', quality=quality, optimize=True)
         
-        while buffer.tell() /1024 > target_kb and quality > 10:
+        while buffer.tell() / 1024 > target_kb and quality > 10:
             buffer = BytesIO()
             quality -= 5
             img.save(buffer, format='WEBP', quality=quality, optimize=True)

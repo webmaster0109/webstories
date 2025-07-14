@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     "story_app",
     "feed_parser",
     "live_streaming",
+    "server_pdf",
 ]
 
 MIDDLEWARE = [
